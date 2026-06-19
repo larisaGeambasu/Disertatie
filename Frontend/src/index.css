@@ -18573,3 +18573,58 @@ width: 850px;
 .treatment-week-day.muted {
   opacity: 0.68;
 }
+
+
+/* UserSettings - Veterinarul meu modal: icon save + close in top-right */
+.vet-contact-modal {
+  position: relative;
+}
+
+.vet-contact-top-actions {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 5;
+}
+
+.vet-contact-save,
+.vet-contact-close {
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.vet-contact-save {
+  background: linear-gradient(135deg, #5b4df0, #7c3aed);
+  color: #ffffff;
+  box-shadow: 0 14px 28px rgba(91, 77, 240, 0.28);
+}
+
+.vet-contact-close {
+  background: #f5f7fb;
+  color: #172033;
+}
+
+.vet-contact-save:hover,
+.vet-contact-close:hover {
+  transform: translateY(-1px);
+}
+
+.vet-contact-save:focus-visible,
+.vet-contact-close:focus-visible {
+  outline: 3px solid rgba(91, 77, 240, 0.22);
+  outline-offset: 2px;
+}
+
+.vet-contact-modal .vet-contact-actions {
+  display: none !important;
+}

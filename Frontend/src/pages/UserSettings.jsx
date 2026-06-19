@@ -766,7 +766,14 @@ function UserSettings() {
       {showVetModal ? (
         <div className="user-modal-overlay">
           <section className="vet-contact-modal">
-            <button className="vet-contact-close" type="button" onClick={() => setShowVetModal(false)}><X size={20} /></button>
+            <div className="vet-contact-top-actions">
+              <button className="vet-contact-save" type="button" onClick={saveVetInfo} aria-label="Salvează contactul veterinar">
+                <Save size={18} />
+              </button>
+              <button className="vet-contact-close" type="button" onClick={() => setShowVetModal(false)} aria-label="Închide">
+                <X size={20} />
+              </button>
+            </div>
 
             <div className="vet-contact-header">
               <span className="vet-contact-icon"><Stethoscope size={22} /></span>
@@ -795,10 +802,6 @@ function UserSettings() {
               </label>
             </div>
 
-            <div className="vet-contact-actions">
-              <button type="button" onClick={() => setShowVetModal(false)}>Renunță</button>
-              <button type="button" className="primary" onClick={saveVetInfo}>Salvează contactul</button>
-            </div>
           </section>
         </div>
       ) : null}
